@@ -28,9 +28,30 @@ Abwesenheiten werden ebenfalls nach SchILD übertragen. Der Einsatz eines weiter
 
 ## Vorbereitungen
 
-Stellen Sie diese Ordnerstruktur in Ihrem Download-Ordner her und speichern Sie die geforderten Dateien:
+Stellen Sie diese Ordnerstruktur in Ihrem Download-Ordner her und laden Sie die geforderten Dateien aus den entsprechenden Programmen. Die Dateien im Ordner *ImportfürSchILD* werden durch das Programm **_Webuntis2SchILD_** erstellt:
 
-![Ordnerstruktur](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/ordnerstruktur.png?raw=true)
+```
+Download-Ordner
++---ExportAusSchild
+|       Faecher.dat
+|       SchuelerLeistungsdaten.dat
+|       SchuelerLernabschnittsdaten.dat
+|       
++---ExportAusUntis
+|       GPU006.TXT
+|       
++---ExportAusWebuntis
+|       AbsencePerStudent_20240918_1230.csv
+|       ExportLessons_20240918_1022.csv
+|       MarksPerLesson_20240922_1603.csv
+|       StudentgroupStudents_20240918_1022.csv
+|       Student_20240922_0952.csv
+|       
+\---ImportFürSchild
+        Faecher.dat
+        Schuelerleistungsdateien.dat
+        SchuelerLernabschnittsdaten.dat
+```
 
 **So wird es gemacht:**
 
