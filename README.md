@@ -108,7 +108,7 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können abweichen. Der erst
 
 ## Herunterladen des Programms
 
-Laden Sie alle Dateien aus dem  *exe*-Ordner ![exe-Ordner](https://github.com/stbaeumer/webuntis2schild/tree/main/exe) z.B. in den Download-Ordner herunter. Also: *webuntis2schild.exe*, *webuntis2schild.dll* usw. Eine Installation ist nicht notwendig. 
+Laden Sie alle Dateien aus dem ![exe-Ordner](https://github.com/stbaeumer/webuntis2schild/tree/main/exe) z.B. in den Download-Ordner herunter. Also: *webuntis2schild.exe*, *webuntis2schild.dll* usw. Eine Installation ist nicht notwendig. 
 **_webuntis2schild.exe_** kann mit Doppelklick gestartet werden:
 
 ![Programm starten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/exe.png?raw=true)
