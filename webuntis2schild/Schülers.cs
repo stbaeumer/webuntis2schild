@@ -188,7 +188,7 @@ public class Schülers : List<Schueler>
     internal Datei SchuelerLernabschnittsdaten(Datei lernabschnittsdaten, Datei exportLessons, Datei studentgroupStudents, Datei absencePerStudent, Datei marksPerLesson, string[] kopfzeile, string v)
     {
         Datei schuelerLernabschnittsdaten = new Datei();
-        schuelerLernabschnittsdaten.DateiPfad = dateiPfad;
+        schuelerLernabschnittsdaten.DateiPfad = v;
         schuelerLernabschnittsdaten.Kopfzeile = kopfzeile;
 
         try

@@ -98,15 +98,6 @@ public class Datei
 
     private void Hinweis(string sourceFile)
     {
-        if (sourceFile.Contains("ermine"))
-        {
-            Console.WriteLine("");
-            Console.WriteLine("  1. Ansicht in Outlook auf Liste ändern.");
-            Console.WriteLine("  2. *Beginn* muss in der ersten Spalte stehen.");
-            Console.WriteLine("  3. Alle Listeneinträge markieren");
-            Console.WriteLine("  4. Zwischenablage in " + sourceFile + " fallenlassen.");
-        }
-
         if (sourceFile.Contains("Student_"))
         {
             Console.WriteLine("");

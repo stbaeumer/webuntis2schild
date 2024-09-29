@@ -1,10 +1,5 @@
 ﻿public class Schueler
 {
-    public Schueler()
-    {
-        Unterrichte = [];
-    }
-
     public int Zeile { get; internal set; }
     public string MailPrefix { get; internal set; }
     public string Nachname { get; internal set; }
@@ -20,7 +15,7 @@
     public string Wohnort { get; internal set; }
     public string Plz { get; internal set; }
     public int WebuntisId { get; internal set; }
-    public Unterrichte Unterrichte { get; internal set; }
+    //public Unterrichte Unterrichte { get; internal set; }
     public int Fehlstd { get; internal set; }
     public int UnentschFehlstd { get; internal set; }
     public int Jahrgang { get; private set; }

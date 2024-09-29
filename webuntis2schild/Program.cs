@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-Console.WriteLine("      webuntis2schild.exe | Published under the terms of GPLv3 | Stefan Bäumer " + DateTime.Now.Year + " | Version 20240927");
+Console.WriteLine("      webuntis2schild.exe | Published under the terms of GPLv3 | Stefan Bäumer " + DateTime.Now.Year + " | Version 20240929");
 Console.WriteLine("=".PadRight(Console.WindowWidth, '='));
 
 Dateien dateien = [];
@@ -39,7 +39,7 @@ do
         interessierendeAbsencePerStudent, 
         interessierendeMarksPerLesson, 
         schuelerleistungsdaten.Kopfzeile,
-        @"\ImportFürSchild\Schülerleistungsdaten.dat");
+        @"ImportFürSchild\Schülerleistungsdaten.dat");
 
     dateien.DoppelteZeilenAusDerZweitenDateiEntfernen(
         interessierendeUntisFaecher,              // An dieser Datei ...
@@ -60,7 +60,7 @@ do
         interessierendeAbsencePerStudent,
         interessierendeMarksPerLesson,
         schuelerleistungsdaten.Kopfzeile,
-        @"\ImportFürSchild\Lernabschnittsdaten.dat");
+        @"ImportFürSchild\Lernabschnittsdaten.dat");
 
     dateien.DoppelteZeilenAusDerZweitenDateiEntfernen(
         neueLernabschnitsdaten,                     // An dieser Datei ...
