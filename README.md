@@ -1,6 +1,6 @@
-# webuntis2schild
+# Webuntis2SchILD
 
-Mit **webuntis2schild** können Daten von Untis und Webuntis nach SchILD übertragen werden. Insbesondere geht es darum, die Leistungsdaten (also die Kombination von Fach, Kursart, Kursbezeichnung, Lehrkraft, Note usw.) von Webuntis nach SchILD zu übertragen:
+Mit **_Webuntis2SchILD_** können Daten von Untis und Webuntis nach SchILD übertragen werden. Insbesondere geht es darum, die Leistungsdaten (also die Kombination von Fach, Kursart, Kursbezeichnung, Lehrkraft, Note usw.) von Webuntis nach SchILD zu übertragen:
 
 ![Schild](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/schild.png?raw=true)
 
@@ -10,7 +10,7 @@ Der Übertrag der Leistungsdaten ist 3x im Jahr sinnvoll:
 - Halbjahreszeugnis 
 - Jahreszeugnis
 
-Vor den Zeugniskonferenzen kann `webuntis2schild` wunderbar dafür eingesetzt werden, insbesondere Noten nach SchILD zu übertragen. Dazu müssen alle Lehrkräfte ihre Zeugnisnoten als Gesamtnoten in Webuntis eintragen. 
+Vor den Zeugniskonferenzen kann **_Webuntis2SchILD_** wunderbar dafür eingesetzt werden, insbesondere Noten nach SchILD zu übertragen. Dazu müssen alle Lehrkräfte ihre Zeugnisnoten als Gesamtnoten in Webuntis eintragen. 
 Abwesenheiten werden ebenfalls nach SchILD übertragen. Der Einsatz eines weiteren Programms zum Einsammeln der Noten ist nicht mehr erforderlich.
 
 ![Gesamtnoten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/gesamtnoten.png?raw=true)
@@ -30,7 +30,7 @@ Stellen Sie diese Ordnerstruktur in Ihrem Download-Ordner her:
 
 ![Ordnerstruktur](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/ordnerstruktur.png?raw=true)
 
-So wird es gemacht:
+**So wird es gemacht:**
 
 Exportieren Sie die Datei `Student_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
 
@@ -81,16 +81,20 @@ Exportieren Sie die Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `Sch
 ## Installation
 
 Das Programm kann in github heruntergeladen werden. Eine Installation ist nicht notwendig. 
-Das Prgramm kann mit Doppelklick gestartet werden:
+Das Programm kann mit Doppelklick gestartet werden:
 
-![Ordnerstruktur](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/exe.png?raw=true)
+![Programm starten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/exe.png?raw=true)
 
 ## Programmstart
 
 Das Programm kann mit Doppelklick gestartet werden. Es öffnet sich ein Terminalfenster, in dem die Ausführung des Programms angezeigt wird.
 Nacheinander werden alle o.g. Dateien eingelesen.  
 
-Nach dem Einlesen haben Sie die Möglichkeit gewünschte Klassen anzugeben. Beispiele:
+Nach dem Einlesen haben Sie die Möglichkeit gewünschte Klassen anzugeben: 
+
+![Programm starten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/programmstart.png?raw=true)
+
+Beispiele:
 
 - `5a,5b,5c` sucht nach Klassen 5a, 5b und 5c
 - `5` sucht nach allen Klassen, die mit 5 beginnen
@@ -106,8 +110,8 @@ Im Anschluss werden die relevanten Dateien im Ordner `ExportFürSchild` abgelegt
 
 ## Übertrag der Zeugnisnoten und Abwesenheiten
 
-Das Programm ist so konzipiert, dass Lehrerinnen und Lehrer alle Zeugnisnoten als Gesamtnoten in Webuntis eintragen können. 
-Zur Vorbereitung auf die Zeugniskonferenz lässt die Zeugnisschreibung das Programm nach dem Fristende für die Noteneingabe laufen und importiert somit die Zeugnisnoten nach SchILD. Diese Lösung kommt also ohne händisches Eintippen und ohne weitere Software (SchILD-App usw.).
+**_Webuntis2SchILD_** so konzipiert, dass Lehrerinnen und Lehrer alle Zeugnisnoten als Gesamtnoten in Webuntis eintragen können. 
+Zur Vorbereitung auf die Zeugniskonferenz lässt die Zeugnisschreibung **_Webuntis2SchILD_** nach dem Fristende für die Noteneingabe laufen und importiert somit die Zeugnisnoten nach SchILD. Diese Lösung kommt also ohne händisches Eintippen und ohne weitere Software (SchILD-App usw.).
 
 ## Fragen und Antworten
 
@@ -118,7 +122,7 @@ Nein. Die Schnittstellen von SchILD sind sehr gut dokumentiert. SchILD meldet si
 Das darf eigentlich nicht passieren. Haben Sie eine der Dateien evtl. nachträglich mit Excel geöffnet und bearbeitet? Öffnen Sie Dateien bitte nicht mit Excel, sondern -sofern notwendig- mit einem Editor, wie z.B. Notepad++. In jedem Fall müssen die Dateien im UTF-8 Format vorliegen.
 
 ### Darf ich das Programm kostenlos nutzen?
-Ja. `webuntis2schild` steht unter der GPL3.0 Lizenz kostenlos für jedermann zur Verfügung.
+Ja. **_Webuntis2SchILD_** steht unter der GPL3.0 Lizenz kostenlos für jedermann zur Verfügung.
 
 ### Wie lese ich die Dateien in SchILD ein?
 
