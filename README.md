@@ -4,9 +4,9 @@ Mit **_Webuntis2SchILD_** können Daten von Untis und Webuntis nach SchILD über
 
 ![Schild](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/schild.png?raw=true)
 
-Der Übertrag der Leistungsdaten ist 3x im Jahr sinnvoll:
+Der Übertrag der Leistungsdaten ist mindestens 3x im Jahr sinnvoll:
 
-1. Statistik
+1. Haupterhebung, um die UVD direkt aus SchILD zu erstellen
 2. Halbjahreszeugnis 
 3. Jahreszeugnis
 
