@@ -161,8 +161,8 @@ Ja. Es ist immer gefährlich, Programme aus dem Internet zu laden. **_Webuntis2S
 
 ### Wie lese ich die Dateien in SchILD ein?
 
-Schritt1:
+#### Schritt1:
 ![Import für Schild](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/import.png?raw=true)
 
-Schritt2:
+#### Schritt2:
 ![Import für Schild](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/import2.png?raw=true)
