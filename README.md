@@ -6,12 +6,12 @@ Mit **_Webuntis2SchILD_** können Daten von Untis und Webuntis nach SchILD über
 
 Der Übertrag der Leistungsdaten ist 3x im Jahr sinnvoll:
 
-- Statistik
-- Halbjahreszeugnis 
-- Jahreszeugnis
+1. Statistik
+2. Halbjahreszeugnis 
+3. Jahreszeugnis
 
 Vor den Zeugniskonferenzen kann **_Webuntis2SchILD_** wunderbar dafür eingesetzt werden, insbesondere Noten nach SchILD zu übertragen. Dazu müssen alle Lehrkräfte ihre Zeugnisnoten als Gesamtnoten in Webuntis eintragen. 
-Abwesenheiten werden ebenfalls nach SchILD übertragen. Der Einsatz eines weiteren Programms zum Einsammeln der Noten ist nicht mehr erforderlich.
+Abwesenheiten werden ebenfalls nach SchILD übertragen. Der Einsatz eines weiteren Programms zum Einsammeln der Noten ist nicht erforderlich.
 
 ![Gesamtnoten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/gesamtnoten.png?raw=true)
 
@@ -32,7 +32,7 @@ Stellen Sie diese Ordnerstruktur in Ihrem Download-Ordner her:
 
 **So wird es gemacht:**
 
-Exportieren Sie die Datei `Student_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
+### Exportieren Sie die Datei `Student_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
 
 - Stammdaten > Schülerinnen
 - "Berichte" auswählen
@@ -41,7 +41,7 @@ Exportieren Sie die Datei `Student_<...>.csv` frisch aus Webuntis, indem Sie als
 
 ![Stammdaten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/stammdaten.png?raw=true)
 
-Exportieren Sie die Datei `MarksPerLesson_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
+### Exportieren Sie die Datei `MarksPerLesson_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
 
 - Klassenbuch > Berichte klicken
 - Alle Klassen auswählen und ggfs. den Zeitraum einschränken
@@ -52,7 +52,7 @@ Exportieren Sie die Datei `MarksPerLesson_<...>.csv` frisch aus Webuntis, indem 
 
 ![Noten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/noten.png?raw=true)
 
-Exportieren Sie die Datei `AbsencePerStudent_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
+### Exportieren Sie die Datei `AbsencePerStudent_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
 
 - Klassenbuch > Berichte klicken
 - Alle Klassen auswählen und als Zeitraum am besten die letzen vier Wochen wählen
@@ -63,7 +63,7 @@ Exportieren Sie die Datei `AbsencePerStudent_<...>.csv` frisch aus Webuntis, ind
 
 ![Klassenbuch Berichte](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/abwesenheiten.png?raw=true)
 
-Exportieren Sie die Datei `GPU006.TXT` frisch aus Webuntis, indem Sie als Administrator:
+### Exportieren Sie die Datei `GPU006.TXT` frisch aus Webuntis, indem Sie als Administrator:
 
 - Datei > Import/Export > Export TXT > Fächer klicken
 - Trennzeichen: Semikolon, Textbegrenzung: ", Encoding :UTF8
@@ -71,23 +71,24 @@ Exportieren Sie die Datei `GPU006.TXT` frisch aus Webuntis, indem Sie als Admini
 	
 ![Untis Export](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/gpu.png?raw=true)
 
-Exportieren Sie die Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` frisch aus Webuntis, indem Sie als Administrator:
+### Exportieren Sie die Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` frisch aus Webuntis, indem Sie als Administrator:
 
 - Datenaustausch > Schnittstelle > Export klicken.
 - Alle Dateien abhaken und dann die drei Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` auswählen
 - Den Export-Ordner auswählen
 - Die Dateien im Ordner `ExportAusSchild` speichern"); 
 
-## Installation
+## Herunterladen des Programms
 
-Das Programm kann in github heruntergeladen werden. Eine Installation ist nicht notwendig. 
-Das Programm kann mit Doppelklick gestartet werden:
+Laden Sie alle Dateien aus dem *exe*-Ordner herunter. Also: *webuntis2schild.exe*, *webuntis2schild.dll* usw. Eine Installation ist nicht notwendig. 
+**_Webuntis2SchILD_** kann mit Doppelklick gestartet werden:
 
 ![Programm starten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/exe.png?raw=true)
 
+
 ## Programmstart
 
-Das Programm kann mit Doppelklick gestartet werden. Es öffnet sich ein Terminalfenster, in dem die Ausführung des Programms angezeigt wird.
+**_Webuntis2SchILD_** kann mit Doppelklick gestartet werden. Es öffnet sich ein Terminalfenster, in dem die Ausführung des Programms angezeigt wird.
 Nacheinander werden alle o.g. Dateien eingelesen.  
 
 Nach dem Einlesen haben Sie die Möglichkeit gewünschte Klassen anzugeben: 
@@ -99,6 +100,7 @@ Beispiele:
 - `5a,5b,5c` sucht nach Klassen 5a, 5b und 5c
 - `5` sucht nach allen Klassen, die mit 5 beginnen
 - `5a` sucht nach Klasse 5a
+- ENTER ohne weitere Angaben sucht nach allen Klassen
 
 Im Anschluss werden die relevanten Dateien im Ordner `ExportFürSchild` abgelegt:
 
