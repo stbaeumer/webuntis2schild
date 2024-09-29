@@ -1,12 +1,14 @@
 # webuntis2schild
 
 Mit webuntis2schild können Daten von Untis und Webuntis nach SchILD übertragen werden.
-Insbesondere geht es darum die Leistungsdaten von Webuntis nach SchILD zu übertragen.
-Der Übertrag der Leistungsdaten ist 3x im Jahr notwendig:
+Insbesondere geht es darum, die Leistungsdaten von Webuntis nach SchILD zu übertragen. Der Übertrag der Leistungsdaten ist 3x im Jahr sinnvoll:
 
 - Statistik
 - Halbjahreszeugnis, 
 - Jahreszeugnis
+
+Vor den Zeugniskonferenzen kann `webuntis2schild` wunderbar dafür eingesetzt werden, insbesondere Noten nach SchILD zu übertragen. Dazu müssen alle Lehrkräfte ihre Zeugnisnoten als Gesamtnoten in Webuntis eintragen. 
+Abwesenheiten werden ebenfalls nach SchILD übertragen. Der Einsatz eines weiteren Programms zum Einsammeln der Noten ist nicht mehr erforderlich.
 
 ## Voraussetzungen
 
@@ -19,8 +21,7 @@ Der Übertrag der Leistungsdaten ist 3x im Jahr notwendig:
 
 Stellen Sie diese Ordnerstruktur in Ihrem Download-Ordner her:
 
- 
-
+![Ordnerstruktur](https://github.com/stbaeumer/webuntis2schild/tree/main/webuntis2schild/bilder/ordnerstruktur.png?raw=true)
 
 So wird es gemacht:
 
@@ -89,5 +90,13 @@ Im Anschluss werden die relevanten Dateien im Ordner `ExportFürSchild` abgelegt
 Das Programm ist so konzipiert, dass Lehrerinnen und Lehrer alle Zeugnisnoten als Gesamtnoten in Webuntis eintragen können. 
 Zur Vorbereitung auf die Zeugniskonferenz lässt die Zeugnisschreibung das Programm nach dem Fristende für die Noteneingabe laufen und importiert somit die Zeugnisnoten nach SchILD. Diese Lösung kommt also ohne händisches Eintippen und ohne weitere Software (SchILD-App usw.).
 
+## Fragen und Antworten
 
+### Ist es gefährlich Daten über *.dat Dateien nach SchILD zu importieren? 
+Nein. Die Schnittstellen von SchILD sind sehr gut dokumentiert. SchILD meldet sich, wenn der Import aus irgendeinem Grund nicht klappt.
 
+### Die Umlaute sehen kaputt aus.
+Das darf eigentlich nicht passieren. Haben Sie eine der Dateien evtl. mit Excel geöffnet und bearbeitet? Öffnen Sie Dateien bitte nicht mit Excel, sondern nur mit einem Editor, wie z.B. Notepad++.
+
+### Darf ich das Programm kostenlos nutzen?
+Ja. `webuntis2schild` steht unter der GPL3.0 Lizenz kostenlos für jedermann zur Verfügung.
