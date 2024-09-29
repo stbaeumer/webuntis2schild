@@ -1,21 +1,28 @@
 # webuntis2schild
 
-Mit webuntis2schild können Daten von Untis und Webuntis nach SchILD übertragen werden.
-Insbesondere geht es darum, die Leistungsdaten von Webuntis nach SchILD zu übertragen. Der Übertrag der Leistungsdaten ist 3x im Jahr sinnvoll:
+Mit **webuntis2schild** können Daten von Untis und Webuntis nach SchILD übertragen werden. Insbesondere geht es darum, die Leistungsdaten (also die Kombination von Fach, Kursart, Kursbezeichnung, Lehrkraft, Note usw.) von Webuntis nach SchILD zu übertragen:
+
+![Schild](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/schild.png?raw=true)
+
+Der Übertrag der Leistungsdaten ist 3x im Jahr sinnvoll:
 
 - Statistik
-- Halbjahreszeugnis, 
+- Halbjahreszeugnis 
 - Jahreszeugnis
 
 Vor den Zeugniskonferenzen kann `webuntis2schild` wunderbar dafür eingesetzt werden, insbesondere Noten nach SchILD zu übertragen. Dazu müssen alle Lehrkräfte ihre Zeugnisnoten als Gesamtnoten in Webuntis eintragen. 
 Abwesenheiten werden ebenfalls nach SchILD übertragen. Der Einsatz eines weiteren Programms zum Einsammeln der Noten ist nicht mehr erforderlich.
+
+![Gesamtnoten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/gesamtnoten.png?raw=true)
 
 ## Voraussetzungen
 
 - Administrativer Zugang zu Webuntis
 - Administrativer Zugang zu SchILD
 - Administrativer Zugang zu Untis
-- Kurse in Untis müssen nach Vorgabe benannt sein, also den Namen der beteiligten Klasse(n) enthalten. Beispiel: `5a_Mathe`
+- Kurse in Untis müssen nach Vorgabe benannt sein, also den Namen der beteiligten Klasse(n) enthalten. Beispiel: 
+
+![Kurse benennen](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/kurse.png?raw=true)
 
 ## Vorbereitungen
 
@@ -32,6 +39,8 @@ Exportieren Sie die Datei `Student_<...>.csv` frisch aus Webuntis, indem Sie als
 - Bei "Schüler" auf CSV klicken
 - Die Datei `Student_<...>.csv` im Ordner `ExportAusWebuntis` speichern");
 
+![Stammdaten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/stammdaten.png?raw=true)
+
 Exportieren Sie die Datei `MarksPerLesson_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
 
 - Klassenbuch > Berichte klicken
@@ -40,6 +49,8 @@ Exportieren Sie die Datei `MarksPerLesson_<...>.csv` frisch aus Webuntis, indem 
 - Unter "Noten" den Haken bei Notennamen ausgeben _NICHT_ setzen
 - Hinter "Noten pro Schüler" auf CSV klicken
 - Die Datei `MarksPerLesson<...>.csv` im Ordner `ExportAusWebuntis` speichern"); 
+
+![Noten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/noten.png?raw=true)
 
 Exportieren Sie die Datei `AbsencePerStudent_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
 
@@ -50,12 +61,16 @@ Exportieren Sie die Datei `AbsencePerStudent_<...>.csv` frisch aus Webuntis, ind
 - Auf CSV klicken
 - Die Datei `AbsencePerStudent_<...>.csv` im Ordner `ExportAusWebuntis` speichern"); 
 
+![Klassenbuch Berichte](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/abwesenheiten.png?raw=true)
+
 Exportieren Sie die Datei `GPU006.TXT` frisch aus Webuntis, indem Sie als Administrator:
 
 - Datei > Import/Export > Export TXT > Fächer klicken
 - Trennzeichen: Semikolon, Textbegrenzung: ", Encoding :UTF8
 - Die Datei `GPU006.TXT` im Ordner `ExportAusUntis` speichern"); 
 	
+![Untis Export](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/gpu.png?raw=true)
+
 Exportieren Sie die Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` frisch aus Webuntis, indem Sie als Administrator:
 
 - Datenaustausch > Schnittstelle > Export klicken.
@@ -66,7 +81,9 @@ Exportieren Sie die Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `Sch
 ## Installation
 
 Das Programm kann in github heruntergeladen werden. Eine Installation ist nicht notwendig. 
-Das Prgramm kann mit Doppelklick gestartet werden.
+Das Prgramm kann mit Doppelklick gestartet werden:
+
+![Ordnerstruktur](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/exe.png?raw=true)
 
 ## Programmstart
 
@@ -85,6 +102,8 @@ Im Anschluss werden die relevanten Dateien im Ordner `ExportFürSchild` abgelegt
 - `SchuelerLernabschnittsdaten.dat` wird angelegt, sofern die Lernabschnitte in SchILD noch nicht existieren. Grundsätzlich sollten die Lernabschnitte bereits in SchILD angelegt sein.
 - `SchuelerLeistungsdaten.dat` wird angelegt, sofern Leistungsdaten sich verändert haben oder der Leistungsdatensatz in SchILD noch nicht existiert. Der Import dieser Datei setzt voraus, dass die Fächer und Lernabschnitte in SchILD existieren bzw. in den entsprechenden Dateien `Faecher.dat` und `SchuelerLernabschnittsdaten.dat` für den Import bereit sind.
 
+![Import für Schild](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/importfuerschild.png?raw=true)
+
 ## Übertrag der Zeugnisnoten und Abwesenheiten
 
 Das Programm ist so konzipiert, dass Lehrerinnen und Lehrer alle Zeugnisnoten als Gesamtnoten in Webuntis eintragen können. 
@@ -96,7 +115,15 @@ Zur Vorbereitung auf die Zeugniskonferenz lässt die Zeugnisschreibung das Progr
 Nein. Die Schnittstellen von SchILD sind sehr gut dokumentiert. SchILD meldet sich, wenn der Import aus irgendeinem Grund nicht klappt.
 
 ### Die Umlaute sehen kaputt aus.
-Das darf eigentlich nicht passieren. Haben Sie eine der Dateien evtl. mit Excel geöffnet und bearbeitet? Öffnen Sie Dateien bitte nicht mit Excel, sondern nur mit einem Editor, wie z.B. Notepad++.
+Das darf eigentlich nicht passieren. Haben Sie eine der Dateien evtl. nachträglich mit Excel geöffnet und bearbeitet? Öffnen Sie Dateien bitte nicht mit Excel, sondern -sofern notwendig- mit einem Editor, wie z.B. Notepad++. In jedem Fall müssen die Dateien im UTF-8 Format vorliegen.
 
 ### Darf ich das Programm kostenlos nutzen?
 Ja. `webuntis2schild` steht unter der GPL3.0 Lizenz kostenlos für jedermann zur Verfügung.
+
+### Wie lese ich die Dateien in SchILD ein?
+
+Schritt1:
+![Import für Schild](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/import.png?raw=true)
+
+Schritt2:
+![Import für Schild](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/import2.png?raw=true)
