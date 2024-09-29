@@ -52,54 +52,57 @@ Download-Ordner
         Schuelerleistungsdateien.dat
         SchuelerLernabschnittsdaten.dat
 ```
+Die Zeitstempel in den Dateinamen sind Beispiele und können von Ihnen abweichen. Der erste Teil des Dateinamens ist wichtig, um die Dateien einlesen zu können.
+
+
 
 **So wird es gemacht:**
 
 ### Exportieren Sie die Datei `Student_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
 
-- Stammdaten > Schülerinnen
-- "Berichte" auswählen
-- Bei "Schüler" auf CSV klicken
-- Die Datei `Student_<...>.csv` im Ordner `ExportAusWebuntis` speichern");
+1. Stammdaten > Schülerinnen
+1. "Berichte" auswählen
+1. Bei "Schüler" auf CSV klicken
+1. Die Datei `Student_<...>.csv` im Ordner `ExportAusWebuntis` speichern");
 
 ![Stammdaten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/stammdaten.png?raw=true)
 
 ### Exportieren Sie die Datei `MarksPerLesson_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
 
-- Klassenbuch > Berichte klicken
-- Alle Klassen auswählen und ggfs. den Zeitraum einschränken
-- Unter "Noten" die Prüfungsart (-Alle-) auswählen
-- Unter "Noten" den Haken bei Notennamen ausgeben _NICHT_ setzen
-- Hinter "Noten pro Schüler" auf CSV klicken
-- Die Datei `MarksPerLesson<...>.csv` im Ordner `ExportAusWebuntis` speichern"); 
+1. Klassenbuch > Berichte klicken
+1. Alle Klassen auswählen und ggfs. den Zeitraum einschränken
+1. Unter "Noten" die Prüfungsart (-Alle-) auswählen
+1. Unter "Noten" den Haken bei Notennamen ausgeben _NICHT_ setzen
+1. Hinter "Noten pro Schüler" auf CSV klicken
+1. Die Datei `MarksPerLesson<...>.csv` im Ordner `ExportAusWebuntis` speichern"); 
 
 ![Noten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/noten.png?raw=true)
 
 ### Exportieren Sie die Datei `AbsencePerStudent_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
 
-- Klassenbuch > Berichte klicken
-- Alle Klassen auswählen und als Zeitraum am besten die letzen vier Wochen wählen
-- Unter "Abwesenheiten" Fehlzeiten pro Schüler*in auswählen
-- pro Tag anhaken
-- Auf CSV klicken
-- Die Datei `AbsencePerStudent_<...>.csv` im Ordner `ExportAusWebuntis` speichern"); 
+1. Klassenbuch > Berichte klicken
+1. Alle Klassen auswählen und als Zeitraum am besten die letzen vier Wochen wählen
+1. Unter "Abwesenheiten" Fehlzeiten pro Schüler*in auswählen
+1. pro Tag anhaken
+1. Auf CSV klicken
+1. Die Datei `AbsencePerStudent_<...>.csv` im Ordner `ExportAusWebuntis` speichern"); 
 
 ![Klassenbuch Berichte](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/abwesenheiten.png?raw=true)
 
 ### Exportieren Sie die Datei `GPU006.TXT` frisch aus Webuntis, indem Sie als Administrator:
 
-- Datei > Import/Export > Export TXT > Fächer klicken
-- Trennzeichen: Semikolon, Textbegrenzung: ", Encoding :UTF8
-- Die Datei `GPU006.TXT` im Ordner `ExportAusUntis` speichern"); 
+1. Datei > Import/Export > Export TXT > Fächer klicken
+1. Trennzeichen: Semikolon, Textbegrenzung: ", Encoding :UTF8
+1. Die Datei `GPU006.TXT` im Ordner `ExportAusUntis` speichern"); 
 	
 ![Untis Export](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/gpu.png?raw=true)
 
 ### Exportieren Sie die Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` frisch aus Webuntis, indem Sie als Administrator:
 
-- Datenaustausch > Schnittstelle > Export klicken.
-- Alle Dateien abhaken und dann die drei Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` auswählen
-- Den Export-Ordner auswählen
-- Die Dateien im Ordner `ExportAusSchild` speichern"); 
+1. Datenaustausch > Schnittstelle > Export klicken.
+1. Alle Dateien abhaken und dann die drei Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` auswählen
+1. Den Export-Ordner auswählen
+1. Die Dateien im Ordner `ExportAusSchild` speichern"); 
 
 ## Herunterladen des Programms
 
