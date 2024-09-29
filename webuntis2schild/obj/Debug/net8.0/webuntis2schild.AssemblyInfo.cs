@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("webuntis2schild")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5060b08eddfe6a1a3b170b6c4c353df4cb1c9f0d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cfa430030fa3005f98dcd4e2a390928e3efe1f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("webuntis2schild")]
 [assembly: System.Reflection.AssemblyTitleAttribute("webuntis2schild")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
