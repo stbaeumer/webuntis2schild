@@ -89,7 +89,7 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können abweichen. Der erst
 
 ![Klassenbuch Berichte](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/abwesenheiten.png?raw=true)
 
-### Exportieren Sie die Datei `GPU006.TXT` frisch aus Webuntis, indem Sie als Administrator:
+### Exportieren Sie die Datei `GPU006.TXT` frisch aus Untis, indem Sie als Administrator:
 
 1. Datei > Import/Export > Export TXT > Fächer klicken
 1. Trennzeichen: Semikolon, Textbegrenzung: ", Encoding :UTF8
@@ -101,34 +101,35 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können abweichen. Der erst
 
 1. Datenaustausch > Schnittstelle > Export klicken
 1. Alle Dateien abhaken und dann die drei Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` auswählen
-1. Den Export-Ordner auswählen
-1. Die Dateien im Ordner `ExportAusSchild` speichern
+1. Das Ausgabeverzeichnis `ExportAusSchild` auswählen
+1. Den Export starten
 
 ![Schild Export](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/exportausschild.png?raw=true)
 
 ## Herunterladen des Programms
 
-Laden Sie alle Dateien aus dem *exe*-Ordner herunter. Also: *webuntis2schild.exe*, *webuntis2schild.dll* usw. Eine Installation ist nicht notwendig. 
-**_Webuntis2SchILD_** kann mit Doppelklick gestartet werden:
+Laden Sie alle Dateien aus dem  *exe*-Ordner ![exe-Ordner](https://github.com/stbaeumer/webuntis2schild/tree/main/exe) z.B. in den Download-Ordner herunter. Also: *webuntis2schild.exe*, *webuntis2schild.dll* usw. Eine Installation ist nicht notwendig. 
+**_webuntis2schild.exe_** kann mit Doppelklick gestartet werden:
 
 ![Programm starten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/exe.png?raw=true)
 
 
 ## Programmstart
 
-**_Webuntis2SchILD_** kann mit Doppelklick gestartet werden. Es öffnet sich ein Terminalfenster, in dem die Ausführung des Programms angezeigt wird.
+**_webuntis2schild.exe_** kann mit Doppelklick gestartet werden. Es öffnet sich ein Terminalfenster, in dem die Ausführung des Programms angezeigt wird.
 Nacheinander werden alle o.g. Dateien eingelesen.  
 
-Nach dem Einlesen haben Sie die Möglichkeit gewünschte Klassen anzugeben: 
+Nach dem Einlesen kann die Auswahl der Klassen eingeschränkt werden: 
 
 ![Programm starten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/programmstart.png?raw=true)
 
 Beispiele:
 
+- `ENTER` ohne weitere Angaben sucht nach allen Klassen
 - `5a,5b,5c` sucht nach Klassen 5a, 5b und 5c
 - `5` sucht nach allen Klassen, die mit 5 beginnen
 - `5a` sucht nach Klasse 5a
-- ENTER ohne weitere Angaben sucht nach allen Klassen
+
 
 Im Anschluss werden die relevanten Dateien im Ordner `ExportFürSchild` abgelegt:
 

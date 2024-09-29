@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-Console.WriteLine("      webuntis2schild.exe | Published under the terms of GPLv3 | Stefan Bäumer " + DateTime.Now.Year + " | Version 20240929");
+Console.WriteLine("      Webuntis2SchILD.exe | Published under the terms of GPLv3 | Stefan Bäumer " + DateTime.Now.Year + " | Version 20240929");
 Console.WriteLine("=".PadRight(Console.WindowWidth, '='));
 
 Dateien dateien = [];
