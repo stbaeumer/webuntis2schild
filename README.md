@@ -1,8 +1,10 @@
 # Webuntis2SchILD
 
-Mit **_Webuntis2SchILD_** können Daten von Untis und Webuntis nach SchILD übertragen werden. Insbesondere geht es darum, die Leistungsdaten (also die Kombination von Fach, Kursart, Kursbezeichnung, Lehrkraft, Note usw.) von Webuntis nach SchILD zu übertragen:
+Mit **_Webuntis2SchILD_** können Daten von Untis und Webuntis nach SchILD übertragen werden. Insbesondere geht es darum, die Leistungsdaten (also die Kombination von Fach, Kursart, Kursbezeichnung, Lehrkraft, Wochenstunden, Note usw.) von Webuntis nach SchILD zu übertragen. Nach dem Import sehen die Leistungsdaten beipsielsweise für den Schüler Ahenstiel im aktuellen Halbjahr so aus:
 
 ![Schild](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/schild.png?raw=true)
+
+Mit jedem Import werden neue Datensätze angelegt und bestehende Datensätze aktualisiert.
 
 Der Übertrag der Leistungsdaten ist mindestens 3x im Jahr sinnvoll:
 
@@ -15,18 +17,18 @@ Abwesenheiten werden ebenfalls nach SchILD übertragen. Der Einsatz eines weiter
 
 ![Gesamtnoten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/gesamtnoten.png?raw=true)
 
-## Voraussetzungen
+## Vier Voraussetzungen
 
-- Administrativer Zugang zu Webuntis
-- Administrativer Zugang zu SchILD
-- Administrativer Zugang zu Untis
-- Kurse in Untis müssen nach Vorgabe benannt sein, also den Namen der beteiligten Klasse(n) enthalten. Beispiel: 
+1. Administrativer Zugang zu Webuntis
+2. Administrativer Zugang zu SchILD
+3. Administrativer Zugang zu Untis
+4. Kursnamen in Untis müssen den Namen der beteiligten Klasse(n) enthalten. Beispiel: 
 
 ![Kurse benennen](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/kurse.png?raw=true)
 
 ## Vorbereitungen
 
-Stellen Sie diese Ordnerstruktur in Ihrem Download-Ordner her:
+Stellen Sie diese Ordnerstruktur in Ihrem Download-Ordner her und speichern Sie die geforderten Dateien:
 
 ![Ordnerstruktur](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/ordnerstruktur.png?raw=true)
 
@@ -124,7 +126,11 @@ Nein. Die Schnittstellen von SchILD sind sehr gut dokumentiert. SchILD meldet si
 Das darf eigentlich nicht passieren. Haben Sie eine der Dateien evtl. nachträglich mit Excel geöffnet und bearbeitet? Öffnen Sie Dateien bitte nicht mit Excel, sondern -sofern notwendig- mit einem Editor, wie z.B. Notepad++. In jedem Fall müssen die Dateien im UTF-8 Format vorliegen.
 
 ### Darf ich das Programm kostenlos nutzen?
-Ja. **_Webuntis2SchILD_** steht unter der GPL3.0 Lizenz kostenlos für jedermann zur Verfügung.
+Ja. **_Webuntis2SchILD_** steht unter der GPL-3.0 Lizenz kostenlos für jedermann zur Verfügung.
+
+### Ist es nicht gefährlich, Programme aus dem Internet zu laden?
+Ja. Es ist immer gefährlich, Programme aus dem Internet zu laden. **_Webuntis2SchILD_** ist jedoch quelloffen und kann von jedem eingesehen und geprüft werden.
+
 
 ### Wie lese ich die Dateien in SchILD ein?
 
