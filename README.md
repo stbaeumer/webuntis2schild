@@ -63,7 +63,7 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können von Ihnen abweichen
 1. Stammdaten > Schülerinnen
 1. "Berichte" auswählen
 1. Bei "Schüler" auf CSV klicken
-1. Die Datei `Student_<...>.csv` im Ordner `ExportAusWebuntis` speichern");
+1. Die Datei `Student_<...>.csv` im Ordner `ExportAusWebuntis` speichern
 
 ![Stammdaten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/stammdaten.png?raw=true)
 
@@ -74,7 +74,7 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können von Ihnen abweichen
 1. Unter "Noten" die Prüfungsart (-Alle-) auswählen
 1. Unter "Noten" den Haken bei Notennamen ausgeben _NICHT_ setzen
 1. Hinter "Noten pro Schüler" auf CSV klicken
-1. Die Datei `MarksPerLesson<...>.csv` im Ordner `ExportAusWebuntis` speichern"); 
+1. Die Datei `MarksPerLesson<...>.csv` im Ordner `ExportAusWebuntis` speichern
 
 ![Noten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/noten.png?raw=true)
 
@@ -85,7 +85,7 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können von Ihnen abweichen
 1. Unter "Abwesenheiten" Fehlzeiten pro Schüler*in auswählen
 1. pro Tag anhaken
 1. Auf CSV klicken
-1. Die Datei `AbsencePerStudent_<...>.csv` im Ordner `ExportAusWebuntis` speichern"); 
+1. Die Datei `AbsencePerStudent_<...>.csv` im Ordner `ExportAusWebuntis` speichern 
 
 ![Klassenbuch Berichte](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/abwesenheiten.png?raw=true)
 
@@ -93,7 +93,7 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können von Ihnen abweichen
 
 1. Datei > Import/Export > Export TXT > Fächer klicken
 1. Trennzeichen: Semikolon, Textbegrenzung: ", Encoding :UTF8
-1. Die Datei `GPU006.TXT` im Ordner `ExportAusUntis` speichern"); 
+1. Die Datei `GPU006.TXT` im Ordner `ExportAusUntis` speichern 
 	
 ![Untis Export](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/gpu.png?raw=true)
 
@@ -102,7 +102,7 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können von Ihnen abweichen
 1. Datenaustausch > Schnittstelle > Export klicken.
 1. Alle Dateien abhaken und dann die drei Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` auswählen
 1. Den Export-Ordner auswählen
-1. Die Dateien im Ordner `ExportAusSchild` speichern"); 
+1. Die Dateien im Ordner `ExportAusSchild` speichern
 
 ## Herunterladen des Programms
 
