@@ -21,7 +21,7 @@ Abwesenheiten werden ebenfalls nach SchILD übertragen. Der Einsatz eines weiter
 
 Stellen Sie diese Ordnerstruktur in Ihrem Download-Ordner her:
 
-![Ordnerstruktur](https://github.com/stbaeumer/webuntis2schild/tree/main/webuntis2schild/bilder/ordnerstruktur.png?raw=true)
+![Ordnerstruktur](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/ordnerstruktur.png?raw=true)
 
 So wird es gemacht:
 
