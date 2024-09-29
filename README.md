@@ -52,7 +52,7 @@ Download-Ordner
         Schuelerleistungsdateien.dat
         SchuelerLernabschnittsdaten.dat
 ```
-Die Zeitstempel in den Dateinamen sind Beispiele und können von Ihnen abweichen. Der erste Teil des Dateinamens ist wichtig, um die Dateien einlesen zu können.
+Die Zeitstempel in den Dateinamen sind Beispiele und können abweichen. Der erste Teil des Dateinamens ist wichtig, um die Dateien einlesen zu können.
 
 
 
@@ -81,7 +81,7 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können von Ihnen abweichen
 ### Exportieren Sie die Datei `AbsencePerStudent_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
 
 1. Klassenbuch > Berichte klicken
-1. Alle Klassen auswählen und als Zeitraum am besten die letzen vier Wochen wählen
+1. Alle Klassen auswählen und als Zeitraum am besten das aktuelle Schuljahr wählen
 1. Unter "Abwesenheiten" Fehlzeiten pro Schüler*in auswählen
 1. pro Tag anhaken
 1. Auf CSV klicken
@@ -97,12 +97,14 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können von Ihnen abweichen
 	
 ![Untis Export](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/gpu.png?raw=true)
 
-### Exportieren Sie die Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` frisch aus Webuntis, indem Sie als Administrator:
+### Exportieren Sie die Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` frisch aus SchILD, indem Sie als Administrator:
 
-1. Datenaustausch > Schnittstelle > Export klicken.
+1. Datenaustausch > Schnittstelle > Export klicken
 1. Alle Dateien abhaken und dann die drei Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` auswählen
 1. Den Export-Ordner auswählen
 1. Die Dateien im Ordner `ExportAusSchild` speichern
+
+![Schild Export](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/exportausschild.png?raw=true)
 
 ## Herunterladen des Programms
 
