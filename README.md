@@ -1,36 +1,40 @@
 # Webuntis2SchILD
 
-Mit **_Webuntis2SchILD_** können Daten von Untis und Webuntis nach SchILD übertragen werden. Insbesondere geht es darum, die Leistungsdaten (also die Kombination von Fach, Kursart, Kursbezeichnung, Lehrkraft, Wochenstunden, Note usw.) von Webuntis nach SchILD zu übertragen. Nach dem Import sehen die Leistungsdaten beipsielsweise für den Schüler Ahenstiel im aktuellen Halbjahr so aus:
+Mit **_Webuntis2SchILD_** werden Leistungsdaten als Textdatei generiert, die dann nach SchILD importiert werden.
+Das Bild zeigt die Leisungsdaten in SchILD nach dem Import:
 
 ![Schild](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/schild.png?raw=true)
 
-Mit jedem Import werden neue Datensätze angelegt und bestehende Datensätze aktualisiert.
+Mit jedem Import werden neue Leistungsdatensätze angelegt und bestehende Datensätze aktualisiert.
+
+### Wann im Schuljahr **_Webuntis2SchILD_** eingesetzt wird
 
 Der Übertrag der Leistungsdaten ist mindestens 3x im Jahr sinnvoll:
 
-1. Haupterhebung, um die UVD direkt aus SchILD zu erstellen
-2. Halbjahreszeugnis 
-3. Jahreszeugnis
+1. Zur Haupterhebung, um die UVD direkt aus SchILD zu erstellen
+2. Zu den Halbjahreszeugnissen, um die Zeugniskonferenzen vorzubereiten. 
+3. Zu den Jahreszeugnissen, um die Zeugniskonferenzen vorzubereiten.
 
-### Noten übertragen
+### Noten einsammeln
 
-Vor den Zeugniskonferenzen kann **_Webuntis2SchILD_** wunderbar dafür eingesetzt werden, insbesondere Noten nach SchILD zu übertragen. Dazu müssen alle Lehrkräfte ihre Zeugnisnoten als *Gesamtnote* in Webuntis eintragen. 
-Abwesenheiten werden ebenfalls nach SchILD übertragen. Der Einsatz eines weiteren Programms zum Einsammeln der Noten ist nicht erforderlich.
+Vor den Zeugniskonferenzen kann **_Webuntis2SchILD_** wunderbar dafür eingesetzt werden, insbesondere Noten nach SchILD zu übertragen. Dazu müssen alle Lehrkräfte ihre Zeugnisnoten als *Gesamtnote* in Webuntis eintragen:
 
 ![Gesamtnoten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/gesamtnoten.png?raw=true)
+ 
+Abwesenheiten werden ebenfalls nach SchILD übertragen. Der Einsatz eines weiteren Programms zum Einsammeln der Noten ist nicht erforderlich.
 
 ## Vier Voraussetzungen für den Einsatz von **_Webuntis2SchILD_**
 
 1. Administrativer Zugang zu Webuntis
 2. Administrativer Zugang zu SchILD
 3. Administrativer Zugang zu Untis
-4. Kursnamen in Untis (=Schülergruppen) müssen den Namen der beteiligten Klasse(n) enthalten. Beispiel: 
+4. In Untis-Kursen muss der Klassenname Bestandteil des Kursnamen (=Schülergruppe) sein. Beispiel: 
 
 ![Kurse benennen](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/kurse.png?raw=true)
 
 ## Vorbereitungen
 
-Folgende Ordnerstruktur muss im Download-Ordner angelegt werden. Die geforderten Dateien aus den entsprechenden Programmen müssen hineingelegt werden. Die Dateien im Ordner *ImportfürSchILD* werden durch das Programm **_Webuntis2SchILD_** erstellt:
+Folgende Ordnerstruktur muss im Download-Ordner angelegt werden. Die geforderten Dateien aus den entsprechenden Programmen müssen hineingelegt werden. Die Dateien im Ordner *ImportfürSchILD* werden von **_Webuntis2SchILD_** erstellt:
 
 ```
 Download-Ordner
@@ -54,11 +58,12 @@ Download-Ordner
         Schuelerleistungsdateien.dat
         SchuelerLernabschnittsdaten.dat
 ```
-Die Zeitstempel in den Dateinamen sind Beispiele und können abweichen. Der erste Teil des Dateinamens ist wichtig, um die Dateien einlesen zu können.
 
-**So wird es gemacht:**
+Die Zeitstempel in den Dateinamen sind Beispiele und können abweichen. Der erste Teil des Dateinamens (inklusive Unterstrich) darf nicht verändert werden, um die Dateien einlesen zu können.
 
-### Exportieren Sie die Datei `Student_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
+### So wird es gemacht:
+
+#### Exportieren Sie die Datei `Student_<...>.csv` aus Webuntis, indem Sie als Administrator:
 
 1. Stammdaten &rarr; Schülerinnen
 1. "Berichte" auswählen
@@ -67,7 +72,7 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können abweichen. Der erst
 
 ![Stammdaten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/stammdaten.png?raw=true)
 
-### Exportieren Sie die Datei `MarksPerLesson_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
+#### Exportieren Sie die Datei `MarksPerLesson_<...>.csv` aus Webuntis, indem Sie als Administrator:
 
 1. Klassenbuch &rarr; Berichte klicken
 1. Alle Klassen auswählen und ggfs. den Zeitraum einschränken
@@ -78,7 +83,7 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können abweichen. Der erst
 
 ![Noten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/noten.png?raw=true)
 
-### Exportieren Sie die Datei `AbsencePerStudent_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
+#### Exportieren Sie die Datei `AbsencePerStudent_<...>.csv` aus Webuntis, indem Sie als Administrator:
 
 1. Klassenbuch &rarr; Berichte klicken
 1. Alle Klassen auswählen und als Zeitraum am besten das aktuelle Schuljahr wählen
@@ -89,7 +94,7 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können abweichen. Der erst
 
 ![Klassenbuch Berichte](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/abwesenheiten.png?raw=true)
 
-### Exportieren Sie die Datei `GPU006.TXT` frisch aus Untis, indem Sie als Administrator:
+#### Exportieren Sie die Datei `GPU006.TXT` aus Untis, indem Sie als Administrator:
 
 1. Datei &rarr; Import/Export &rarr; Export TXT &rarr; Fächer klicken
 1. Trennzeichen: Semikolon, Textbegrenzung: ", Encoding :UTF8
@@ -97,7 +102,7 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können abweichen. Der erst
 	
 ![Untis Export](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/gpu.png?raw=true)
 
-### Exportieren Sie die Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` frisch aus SchILD, indem Sie als Administrator:
+#### Exportieren Sie die Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` aus SchILD, indem Sie als Administrator:
 
 1. Datenaustausch &rarr; Schnittstelle &rarr; Export klicken
 1. Alle Dateien abhaken und dann die drei Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` auswählen
@@ -133,7 +138,7 @@ Beispiele:
 
 Im Anschluss werden die relevanten Dateien im Ordner `ExportFürSchild` abgelegt:
 
-- `Faecher.dat` wird angelegt, sofern Fächer in Untis vorhanden sind, die in SchILD noch nicht existieren. Prüfen Sie am besten zuerst die Fächer. Vervollständigen Sie in SchILD die Fächer.
+- `Faecher.dat` wird angelegt, sofern Fächer in Untis vorhanden sind, die in SchILD noch nicht existieren. Alternativ kann die Datei auch aus Untis exportiert werden. Prüfen Sie am besten zuerst die Fächer. Vervollständigen Sie in SchILD die Fächer.
 - `SchuelerLernabschnittsdaten.dat` wird angelegt, sofern die Lernabschnitte in SchILD noch nicht existieren. Grundsätzlich sollten die Lernabschnitte bereits in SchILD angelegt sein.
 - `SchuelerLeistungsdaten.dat` wird angelegt, sofern Leistungsdaten sich verändert haben oder der Leistungsdatensatz in SchILD noch nicht existiert. Der Import dieser Datei setzt voraus, dass die Fächer und Lernabschnitte in SchILD existieren bzw. in den entsprechenden Dateien `Faecher.dat` und `SchuelerLernabschnittsdaten.dat` für den Import bereit sind.
 
@@ -158,6 +163,8 @@ Ja. **_Webuntis2SchILD_** steht unter der GPL-3.0 Lizenz kostenlos für jederman
 ### Ist es nicht gefährlich, Programme aus dem Internet zu laden?
 Ja. Es ist immer gefährlich, Programme aus dem Internet zu laden. **_Webuntis2SchILD_** ist jedoch quelloffen und kann von jedem eingesehen und geprüft werden.
 
+### Man kann die Schuelerleistungsdaten.dat auch direkt aus Untis exportieren. 
+Ja, das ist richtig. Ohne Untis-Kursmodul ist die `Schuelerleistungsdaten.dat` allerdings leer.
 
 ### Wie lese ich die Dateien in SchILD ein?
 
