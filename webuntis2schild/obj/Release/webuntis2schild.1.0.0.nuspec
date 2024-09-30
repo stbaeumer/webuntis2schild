@@ -5,7 +5,7 @@
     <version>1.0.0</version>
     <authors>webuntis2schild</authors>
     <description>Package Description</description>
-    <repository type="git" commit="0de669abee7321695e4b2a868b22953a9711c0ea" />
+    <repository type="git" commit="02e0ec4de412e076f616c0b9bffb38461e9ba10f" />
     <dependencies>
       <group targetFramework="net8.0" />
     </dependencies>
