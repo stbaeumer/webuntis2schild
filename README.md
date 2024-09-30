@@ -12,23 +12,25 @@ Der Übertrag der Leistungsdaten ist mindestens 3x im Jahr sinnvoll:
 2. Halbjahreszeugnis 
 3. Jahreszeugnis
 
-Vor den Zeugniskonferenzen kann **_Webuntis2SchILD_** wunderbar dafür eingesetzt werden, insbesondere Noten nach SchILD zu übertragen. Dazu müssen alle Lehrkräfte ihre Zeugnisnoten als Gesamtnoten in Webuntis eintragen. 
+### Noten übertragen
+
+Vor den Zeugniskonferenzen kann **_Webuntis2SchILD_** wunderbar dafür eingesetzt werden, insbesondere Noten nach SchILD zu übertragen. Dazu müssen alle Lehrkräfte ihre Zeugnisnoten als *Gesamtnote* in Webuntis eintragen. 
 Abwesenheiten werden ebenfalls nach SchILD übertragen. Der Einsatz eines weiteren Programms zum Einsammeln der Noten ist nicht erforderlich.
 
 ![Gesamtnoten](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/gesamtnoten.png?raw=true)
 
-## Vier Voraussetzungen
+## Vier Voraussetzungen für den Einsatz von **_Webuntis2SchILD_**
 
 1. Administrativer Zugang zu Webuntis
 2. Administrativer Zugang zu SchILD
 3. Administrativer Zugang zu Untis
-4. Kursnamen in Untis müssen den Namen der beteiligten Klasse(n) enthalten. Beispiel: 
+4. Kursnamen in Untis (=Schülergruppen) müssen den Namen der beteiligten Klasse(n) enthalten. Beispiel: 
 
 ![Kurse benennen](https://github.com/stbaeumer/webuntis2schild/blob/main/bilder/kurse.png?raw=true)
 
 ## Vorbereitungen
 
-Stellen Sie diese Ordnerstruktur in Ihrem Download-Ordner her und laden Sie die geforderten Dateien aus den entsprechenden Programmen. Die Dateien im Ordner *ImportfürSchILD* werden durch das Programm **_Webuntis2SchILD_** erstellt:
+Folgende Ordnerstruktur muss im Download-Ordner angelegt werden. Die geforderten Dateien aus den entsprechenden Programmen müssen hineingelegt werden. Die Dateien im Ordner *ImportfürSchILD* werden durch das Programm **_Webuntis2SchILD_** erstellt:
 
 ```
 Download-Ordner
@@ -54,13 +56,11 @@ Download-Ordner
 ```
 Die Zeitstempel in den Dateinamen sind Beispiele und können abweichen. Der erste Teil des Dateinamens ist wichtig, um die Dateien einlesen zu können.
 
-
-
 **So wird es gemacht:**
 
 ### Exportieren Sie die Datei `Student_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
 
-1. Stammdaten > Schülerinnen
+1. Stammdaten &rarr; Schülerinnen
 1. "Berichte" auswählen
 1. Bei "Schüler" auf CSV klicken
 1. Die Datei `Student_<...>.csv` im Ordner `ExportAusWebuntis` speichern
@@ -69,7 +69,7 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können abweichen. Der erst
 
 ### Exportieren Sie die Datei `MarksPerLesson_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
 
-1. Klassenbuch > Berichte klicken
+1. Klassenbuch &rarr; Berichte klicken
 1. Alle Klassen auswählen und ggfs. den Zeitraum einschränken
 1. Unter "Noten" die Prüfungsart (-Alle-) auswählen
 1. Unter "Noten" den Haken bei Notennamen ausgeben _NICHT_ setzen
@@ -80,7 +80,7 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können abweichen. Der erst
 
 ### Exportieren Sie die Datei `AbsencePerStudent_<...>.csv` frisch aus Webuntis, indem Sie als Administrator:
 
-1. Klassenbuch > Berichte klicken
+1. Klassenbuch &rarr; Berichte klicken
 1. Alle Klassen auswählen und als Zeitraum am besten das aktuelle Schuljahr wählen
 1. Unter "Abwesenheiten" Fehlzeiten pro Schüler*in auswählen
 1. pro Tag anhaken
@@ -91,7 +91,7 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können abweichen. Der erst
 
 ### Exportieren Sie die Datei `GPU006.TXT` frisch aus Untis, indem Sie als Administrator:
 
-1. Datei > Import/Export > Export TXT > Fächer klicken
+1. Datei &rarr; Import/Export &rarr; Export TXT &rarr; Fächer klicken
 1. Trennzeichen: Semikolon, Textbegrenzung: ", Encoding :UTF8
 1. Die Datei `GPU006.TXT` im Ordner `ExportAusUntis` speichern 
 	
@@ -99,7 +99,7 @@ Die Zeitstempel in den Dateinamen sind Beispiele und können abweichen. Der erst
 
 ### Exportieren Sie die Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` frisch aus SchILD, indem Sie als Administrator:
 
-1. Datenaustausch > Schnittstelle > Export klicken
+1. Datenaustausch &rarr; Schnittstelle &rarr; Export klicken
 1. Alle Dateien abhaken und dann die drei Dateien `Faecher.dat`, `SchuelerLeistungsdaten.dat` und `SchuelerLernabschnittsdaten.dat` auswählen
 1. Das Ausgabeverzeichnis `ExportAusSchild` auswählen
 1. Den Export starten
