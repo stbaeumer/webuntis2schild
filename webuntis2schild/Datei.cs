@@ -69,28 +69,20 @@ public class Datei
     {
         var extensions = new List<string> { "*.csv", "*.dat", "*.TXT" };
 
-        if (!Path.Exists(Global.Pfad + Path.GetDirectoryName(dateiPfad)))
+        if (!Path.Exists(Path.GetDirectoryName(dateiPfad)))
         {
-            Directory.CreateDirectory(Global.Pfad + Path.GetDirectoryName(dateiPfad));
+            Directory.CreateDirectory(Path.GetDirectoryName(dateiPfad));
         }
 
         var sourceFile = (from ext in extensions
-                          from f in Directory.GetFiles(Global.Pfad + Path.GetDirectoryName(dateiPfad), ext, SearchOption.AllDirectories)
+                          from f in Directory.GetFiles(Path.GetDirectoryName(dateiPfad), ext, SearchOption.AllDirectories)
                           where Path.GetFileName(f).StartsWith(Path.GetFileName(dateiPfad))
                           orderby File.GetLastWriteTime(f)
                           select f).LastOrDefault();
 
         if (sourceFile == null)
         {
-            Hinweis(Global.Pfad + dateiPfad);
-        }
-        else
-        {   
-            if (new FileInfo(sourceFile).LastWriteTime.Date < DateTime.Now.Date.AddDays(-(Global.SoAltDürfenImportDateienHöchstensSein)))
-            {
-                Console.WriteLine("Die Datei " + sourceFile + "ist älter als " + Global.SoAltDürfenImportDateienHöchstensSein + " Tage. ");
-                Hinweis(Global.Pfad + dateiPfad + ".csv");
-            }
+            Hinweis(dateiPfad);
         }
 
         return sourceFile;
@@ -101,62 +93,53 @@ public class Datei
         if (sourceFile.Contains("Student_"))
         {
             Console.WriteLine("");
-            Console.WriteLine("  Exportieren Sie die Datei " + Path.GetFileName(sourceFile) + " frisch aus Webuntis, indem Sie als Administrator:");
+            Console.WriteLine("  Exportieren Sie die Datei " + Path.GetFileName(sourceFile) + " aus Webuntis, indem Sie als Administrator:");
             Console.WriteLine("   1. Stammdaten > Schülerinnen");
             Console.WriteLine("   2. \"Berichte\" auswählen");
             Console.WriteLine("   3. Bei \"Schüler\" auf CSV klicken");
-            Console.WriteLine("   4. Die Datei \"Student_<...>.CSV\" im Ordner " + Path.GetDirectoryName(sourceFile) + " zu speichern");
+            Console.WriteLine("   4. Die Datei speichern im Ordner: " + Directory.GetCurrentDirectory() + "\\" + Path.GetDirectoryName(sourceFile));
         }
 
         if (sourceFile.Contains("MarksPerLesson"))
         {
             Console.WriteLine("");
+            Console.WriteLine("  Exportieren Sie die Datei " + Path.GetFileName(sourceFile) + " aus Webuntis, indem Sie als Administrator:");
             Console.WriteLine("   1. Klassenbuch > Berichte klicken");
             Console.WriteLine("   2. Alle Klassen auswählen und ggfs. den Zeitraum einschränken");
             Console.WriteLine("   3. Unter \"Noten\" die Prüfungsart (-Alle-) auswählen");
             Console.WriteLine("   4. Unter \"Noten\" den Haken bei Notennamen ausgeben _NICHT_ setzen");
             Console.WriteLine("   5. Hinter \"Noten pro Schüler\" auf CSV klicken");
-            Console.WriteLine("   6. Die Datei \"MarksPerLesson<...>.CSV\" im Ordner " + Path.GetDirectoryName(sourceFile) + " zu speichern");
+            Console.WriteLine("   6. Die Datei speichern im Ordner: " + Directory.GetCurrentDirectory() + "\\" + Path.GetDirectoryName(sourceFile));
         }
 
         if (sourceFile.Contains("AbsencePerStudent"))
         {
             Console.WriteLine("");
-            Console.WriteLine("  Exportieren Sie die Datei " + Path.GetFileName(sourceFile) + " frisch aus Webuntis, indem Sie als Administrator:");
-            Console.WriteLine("   1. Klassenbuch > Berichte klicken");
-            Console.WriteLine("   2. Alle Klassen auswählen und als Zeitraum am besten die letzen vier Wochen wählen.");
+            Console.WriteLine("  Exportieren Sie die Datei " + Path.GetFileName(sourceFile) + " aus Webuntis, indem Sie als Administrator:");
+            Console.WriteLine("   1. Den Pafad gehen: Klassenbuch > Berichte klicken");
+            Console.WriteLine("   2. Alle Klassen oder einzelne Klassen auswählen.");
             Console.WriteLine("   3. Unter \"Abwesenheiten\" Fehlzeiten pro Schüler*in auswählen");
             Console.WriteLine("   4. \"pro Tag\" ");
             Console.WriteLine("   5. Auf CSV klicken");
+            Console.WriteLine("   6. Die Datei speichern im Ordner: " + Directory.GetCurrentDirectory() + "\\" + Path.GetDirectoryName(sourceFile));
         }
 
         if (sourceFile.Contains(".dat"))
         {
             Console.WriteLine("");
-            Console.WriteLine("  Exportieren Sie " + Path.GetFileName(sourceFile) + " frisch aus SchILD, indem Sie:");
-            Console.WriteLine("   1. Datenaustausch > Schnittstelle > Export");
-            Console.WriteLine("   2. Unterrichtsfächer auswählen.");
-            Console.WriteLine("   3. Den Export-Ordner auswählen: " + Path.GetFileName(sourceFile));
+            Console.WriteLine("  Exportieren Sie " + Path.GetFileName(sourceFile) + " aus SchILD, indem Sie:");
+            Console.WriteLine("   1. In SchILD den Pfad gehen: Datenaustausch > Schnittstelle > Export");
+            Console.WriteLine("   2. Die Datei auswählen.");
+            Console.WriteLine("   3. Die Datei speichern im Ordner: " + Directory.GetCurrentDirectory() + "\\" + Path.GetDirectoryName(sourceFile));
         }
 
         if (sourceFile.Contains("GPU"))
         {
             Console.WriteLine("");
-            Console.WriteLine("  Exportieren Sie die " + Path.GetFileName(sourceFile) + " frisch aus Untis, indem Sie:");
+            Console.WriteLine("  Exportieren Sie die *" + Path.GetFileName(sourceFile) + "* aus Untis, indem Sie:");
             Console.WriteLine("   1. Datei > Import/Export > Export TXT > Fächer klicken");
             Console.WriteLine("   2. Trennzeichen: Semikolon, Textbegrenzung \", Encoding UTF8");
-            Console.WriteLine("   3. In den Ordner speichern: " + sourceFile + @"ExportAusUntis\");
-        }
-
-        if (sourceFile.Contains("AbsenceTimesTotal"))
-        {
-            Console.WriteLine("");
-            Console.WriteLine("  Exportieren Sie die Datei " + Path.GetFileName(sourceFile) + " frisch aus Webuntis, indem Sie als Administrator:");
-            Console.WriteLine("   1. Administration > Export klicken");
-            Console.WriteLine("   2. Zeitraum begrenzen, also die Woche der Zeugniskonferenz und vergange Abschnitte herauslassen");
-            Console.WriteLine("   3. Das CSV-Icon hinter Gesamtfehlzeiten klicken");
-            Console.WriteLine("   4. Die Gesamtfehlzeiten (\"AbsenceTimesTotal<...>.CSV\") im Ordner " + Path.GetDirectoryName(sourceFile) + " zu speichern");
-            Console.WriteLine("WICHTIG: Es kann Sinn machen nur Abwesenheiten bis zur letzten Woche in Webuntis auszuwählen.");
+            Console.WriteLine("   3. Die Datei speichern im Ordner: " + Directory.GetCurrentDirectory() + "\\" + Path.GetDirectoryName(sourceFile));
         }
 
         if (sourceFile.Contains("StudentgroupStudents"))
@@ -166,17 +149,16 @@ public class Datei
             Console.WriteLine("   1. Administration > Export klicken");
             Console.WriteLine("   2. Zeitraum begrenzen, also die Woche der Zeugniskonferenz und vergange Abschnitte herauslassen");
             Console.WriteLine("   3. Das CSV-Icon hinter Schülergruppen klicken");
-            Console.WriteLine("   4. Die Schülergruppen  (\"StudentgroupStudents<...>.CSV\") im Ordner " + Path.GetDirectoryName(sourceFile) + " zu speichern");
+            Console.WriteLine("   4. Die Datei speichern im Ordner: " + Directory.GetCurrentDirectory() + "\\" + Path.GetDirectoryName(sourceFile));
         }
 
         if (sourceFile.Contains("ExportLessons"))
         {
             Console.WriteLine("");
-            Console.WriteLine("  Exportieren Sie die Datei " + Path.GetFileName(sourceFile) + " frisch aus Webuntis, indem Sie als Administrator:");
+            Console.WriteLine("  Exportieren Sie die Datei *" + Path.GetFileName(sourceFile) + "* aus Webuntis, indem Sie als Administrator:");
             Console.WriteLine("   1. Administration > Export klicken");
-            Console.WriteLine("   2. Zeitraum begrenzen, also die Woche der Zeugniskonferenz und vergange Abschnitte herauslassen");
             Console.WriteLine("   3. Das CSV-Icon hinter Unterricht klicken");
-            Console.WriteLine("   4. Die Unterrichte (\"ExportLessons<...>.CSV\") im Ordner " + Path.GetDirectoryName(sourceFile) + " zu speichern");
+            Console.WriteLine("   4. Die Datei speichern im Ordner: " + Directory.GetCurrentDirectory() + "\\" + Path.GetDirectoryName(sourceFile));
         }
         Console.ReadKey();
         Environment.Exit(0);
@@ -184,7 +166,6 @@ public class Datei
 
     internal void DatAusgabe()
     {
-        string name = DateiPfad;
         IEnumerable<System.Object> objektListe = Zeilen;
         Encoding encoding = Encoding.UTF8;
         char trennzeichen = ';';
@@ -193,22 +174,20 @@ public class Datei
         int index = 0;
         int anzahl = 0;
 
-        if (!Path.Exists(Global.Pfad + Path.GetDirectoryName(name)))
+        if (!Path.Exists(Path.GetDirectoryName(DateiPfad)))
         {
-            Directory.CreateDirectory(Global.Pfad + Path.GetDirectoryName(name));
+            Directory.CreateDirectory(Path.GetDirectoryName(DateiPfad));
         }
-
-        var pfadUndDateiname = Global.Pfad + name;
 
         try
         {
-            while (File.Exists(pfadUndDateiname))
+            while (File.Exists(DateiPfad))
             {
-                DateTime lastWriteTime = File.GetLastWriteTime(pfadUndDateiname);
+                DateTime lastWriteTime = File.GetLastWriteTime(DateiPfad);
                 string timeStamp = lastWriteTime.ToString("yyyy-MM-dd_HH-mm-ss");
                 try
                 {
-                    File.Move(pfadUndDateiname, pfadUndDateiname.Replace(".dat", timeStamp + ".dat"));   
+                    File.Move(DateiPfad, DateiPfad.Replace(".dat", timeStamp + ".dat"));   
                 }
                 catch (Exception ex)
                 {
@@ -216,11 +195,11 @@ public class Datei
                 }
                 finally 
                 {
-                    Global.ZeileSchreiben(5, "Datei " + pfadUndDateiname + " existiert bereits und wird umbenannt", "ok", Fehler);
+                    Global.ZeileSchreiben(5, "Datei " + DateiPfad + " existiert bereits und wird umbenannt", "ok", Fehler);
                 }                
             }
 
-            using (FileStream fs = new FileStream(pfadUndDateiname, FileMode.CreateNew))
+            using (FileStream fs = new FileStream(DateiPfad, FileMode.CreateNew))
             {
                 using (StreamWriter writer = new StreamWriter(fs, encoding))
                 {
@@ -239,7 +218,7 @@ public class Datei
                     }
                     finally 
                     {
-                        Global.ZeileSchreiben(5, "Datei " + pfadUndDateiname + " wird erstellt", "ok", Fehler);
+                        Global.ZeileSchreiben(5, "Datei " + DateiPfad + " wird erstellt", "ok", Fehler);
                     }
                 }
             }

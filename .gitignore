@@ -52,4 +52,5 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-/webuntis2schild/bin/Debug/net8.0
+/webuntis2schild/bin/Debug
+/webuntis2schild/bin/Release
